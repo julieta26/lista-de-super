@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🛒 Lista de Súper App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            background-color: #eef2f7;
+            border-left: 4px solid #3498db;
+            padding: 12px;
+            text-align: left;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .kbd {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="card">
+        <h1>🛒 Lista de Súper</h1>
+        <p>El programa interactivo se está ejecutando mediante cuadros de diálogo.</p>
+        
+        <div class="instructions">
+            <strong>📌 Para ver las salidas de texto:</strong>
+            <ul>
+                <li>Presiona <span class="kbd">F12</span> o <span class="kbd">Ctrl + Shift + I</span></li>
+                <li>Pásate a la pestaña <strong>Consola (Console)</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
