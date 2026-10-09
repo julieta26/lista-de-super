@@ -36,5 +36,61 @@ console.log("Comprado:", comprado);
 console.log("No había:", noHabia);
 console.log("Lista final:", listadesuper);
 
+// --- PARTE 3 ---
+
+// 1. Función de impresión (logItems)
+function logItems(arreglo) {
+  arreglo.forEach((producto, indice) => {
+    console.log(`${indice}: ${producto}`);
+  });
+}
+
+// 2. Módulo Interactivo ("Súper App")
+let comando = "";
+
+while (comando !== "salir") {
+  comando = prompt("Ingrese un comando ('nuevo', 'listar', 'borrar' o 'salir'):");
+
+  if (comando !== null) {
+    comando = comando.toLowerCase().trim();
+  }
+
+  switch (comando) {
+    case "nuevo":
+      let nuevoProducto = prompt("Ingresa el nombre del nuevo producto:");
+      if (nuevoProducto) {
+        listadesuper.push(nuevoProducto);
+        console.log(`Producto "${nuevoProducto}" agregado.`);
+      }
+      break;
+
+    case "listar":
+      console.log("--- Lista de Productos ---");
+      logItems(listadesuper);
+      break;
+
+    case "borrar":
+      let indiceABorrar = prompt("Ingresa el índice del producto a eliminar:");
+      let posicion = Number(indiceABorrar);
+
+      if (!isNaN(posicion) && posicion >= 0 && posicion < listadesuper.length) {
+        let eliminado = listadesuper.splice(posicion, 1);
+        console.log(`Producto "${eliminado[0]}" eliminado.`);
+      } else {
+        console.log("Índice no válido.");
+      }
+      break;
+
+    case "salir":
+      console.log("Programa finalizado.");
+      break;
+
+    default:
+      if (comando !== null) {
+        console.log("Comando no válido. Usa: nuevo, listar, borrar o salir.");
+      }
+      break;
+  }
+}
 
 
